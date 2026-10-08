@@ -65,8 +65,8 @@ features aimed at network engineers (FortiGate, SSL/WAF, Firepower task icons).
 - This is a learning project, not a production tool — there's no authentication and it's meant
   to run on one machine for one person.
   ## Screenshots
-  ### Demo
-  ![Demo](./pic/Demo.png)
+  ### TODO-LIST-suggest
+  ![TODO-LIST-suggest](./PIC/TODO-LIST-suggest.PNG)
   
   
 
