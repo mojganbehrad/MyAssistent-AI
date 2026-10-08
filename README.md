@@ -64,6 +64,11 @@ features aimed at network engineers (FortiGate, SSL/WAF, Firepower task icons).
 - The AI features depend on Ollama running locally (`ollama serve` / the Ollama app).
 - This is a learning project, not a production tool — there's no authentication and it's meant
   to run on one machine for one person.
+  ## Screenshots
+  ### Demo
+  ![Demo](pic/Demo.png)
+  
+  
 
 ## Roadmap
 
