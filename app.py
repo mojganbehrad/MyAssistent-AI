@@ -27,19 +27,29 @@ app = Flask(
     static_folder=resource_path("static")
 )
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL = "llama3.2"
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+MODEL = "llama-3.1-8b-instant"
 WORKDAY_START = 9   # 09:00
 WORKDAY_END = 18    # 18:00
 
 def ask_ollama(prompt, max_tokens=200):
-    response = requests.post(OLLAMA_URL, json={
-        "model": MODEL,
-        "prompt": prompt,
-        "stream": False,
-        "options": {"num_predict": max_tokens}
-    })
-    return response.json()["response"]
+response = requests.post(
+GROQ_URL,
+headers={
+"Authorization": f"Bearer {os.environ.get('GROQ_API_KEY')}",
+"Content-Type": "application/json"
+},
+json={
+"model": MODEL,
+"messages": [
+{"role": "user", "content": prompt}
+],
+"max_tokens": max_tokens
+}
+)
+
+response.raise_for_status()
+return response.json()["choices"][0]["message"]["content"]
 
 def extract_json(raw_text):
     start = raw_text.find("{")
