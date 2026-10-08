@@ -33,23 +33,23 @@ WORKDAY_START = 9   # 09:00
 WORKDAY_END = 18    # 18:00
 
 def ask_ollama(prompt, max_tokens=200):
-response = requests.post(
-GROQ_URL,
-headers={
-"Authorization": f"Bearer {os.environ.get('GROQ_API_KEY')}",
-"Content-Type": "application/json"
-},
-json={
-"model": MODEL,
-"messages": [
-{"role": "user", "content": prompt}
-],
-"max_tokens": max_tokens
-}
-)
+    response = requests.post(
+        GROQ_URL,
+        headers={
+            "Authorization": f"Bearer {os.environ.get('GROQ_API_KEY')}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": MODEL,
+            "messages": [
+                {"role": "user", "content": prompt}
+            ],
+            "max_tokens": max_tokens
+        }
+    )
 
-response.raise_for_status()
-return response.json()["choices"][0]["message"]["content"]
+    response.raise_for_status()
+    return response.json()["choices"][0]["message"]["content"]
 
 def extract_json(raw_text):
     start = raw_text.find("{")
