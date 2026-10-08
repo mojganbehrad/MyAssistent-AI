@@ -66,7 +66,7 @@ features aimed at network engineers (FortiGate, SSL/WAF, Firepower task icons).
   to run on one machine for one person.
   ## Screenshots
   ### Demo
-  ![Demo](pic/Demo.png)
+  ![Demo](./pic/Demo.png)
   
   
 
