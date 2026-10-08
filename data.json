@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "text": "Dentist appointment",
+    "date": "2026-10-09",
+    "category": "personal",
+    "icon": "calendar",
+    "color": "#a78bfa",
+    "reminder_days": 1,
+    "notified_date": "2026-10-08",
+    "start_time": "10:00",
+    "end_time": "11:00"
+  },
+  {
+    "id": 2,
+    "text": "Coffee with Sara today at 7:00 pm",
+    "date": "2026-10-08",
+    "category": "personal",
+    "icon": "coffee",
+    "color": "#38bdf8",
+    "reminder_days": 1,
+    "notified_date": null,
+    "start_time": "19:00",
+    "end_time": "20:00"
+  },
+  {
+    "id": 3,
+    "text": "Change Switch Core",
+    "date": "2026-10-28",
+    "category": "network",
+    "icon": "shield",
+    "color": "#fb923c",
+    "reminder_days": 1,
+    "notified_date": null,
+    "start_time": "12:00",
+    "end_time": "16:00"
+  }
+]
